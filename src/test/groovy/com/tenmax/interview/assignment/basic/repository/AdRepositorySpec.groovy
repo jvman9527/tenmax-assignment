@@ -1,9 +1,8 @@
-package com.tenmax.interview.assignment.repository
+package com.tenmax.interview.assignment.basic.repository
 
 import com.tenmax.interview.assignment.basic.domain.Ad
 import com.tenmax.interview.assignment.basic.domain.Image
-import com.tenmax.interview.assignment.basic.domain.Link;
-import com.tenmax.interview.assignment.basic.repository.AdRepository
+import com.tenmax.interview.assignment.basic.domain.Link
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest
 import spock.lang.Specification
