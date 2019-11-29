@@ -21,7 +21,7 @@ public class TenMaxAdGrabbingScheduler {
 
     @Scheduled(cron = "0 * * * * *")
     public void grab() {
-        Ad ad = tenMaxAdGrabber.grab();
+        Ad ad = tenMaxAdGrabber.grabHard();
         if (ad != null) {
             adRepository.save(ad);
         }

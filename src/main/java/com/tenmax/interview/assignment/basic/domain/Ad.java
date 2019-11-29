@@ -1,6 +1,9 @@
 package com.tenmax.interview.assignment.basic.domain;
 
+import com.tenmax.interview.assignment.basic.jpa.converter.StringListConverter;
+
 import javax.persistence.*;
+import java.util.List;
 
 /**
  * TenMax 廣告
@@ -38,14 +41,18 @@ public class Ad {
     })
     private Link clickUrl;
 
+    @Convert(converter = StringListConverter.class)
+    private List<String> impressionLink;
+
     public Ad() {}
 
-    public Ad(String title, String description, Image imageUrl, Image iconUrl, Link clickUrl) {
+    public Ad(String title, String description, Image imageUrl, Image iconUrl, Link clickUrl, List<String> impressionLink) {
         this.title = title;
         this.description = description;
         this.imageUrl = imageUrl;
         this.iconUrl = iconUrl;
         this.clickUrl = clickUrl;
+        this.impressionLink = impressionLink;
     }
 
     public Long getId() {
@@ -70,6 +77,10 @@ public class Ad {
 
     public Link getClickUrl() {
         return clickUrl;
+    }
+
+    public List<String> getImpressionLink() {
+        return impressionLink;
     }
 
 }

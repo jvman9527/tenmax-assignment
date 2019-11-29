@@ -18,7 +18,8 @@ class AdRepositorySpec extends Specification {
         "ad description",
         new Image("//tenmax/interview/img/a.png", 1,1),
         new Image("//tenmax/interview/icon/b.png", 1, 1),
-        new Link("https://tenmax.io/click/me")
+        new Link("https://tenmax.io/click/me"),
+        ["https://tenmax.io/impression/link"]
     )
 
     def "save ad correctly"() {

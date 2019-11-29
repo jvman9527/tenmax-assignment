@@ -75,7 +75,8 @@ public class RestTemplateTenMaxAdGrabber implements TenMaxAdGrabber {
         Image imageUrl = toImage((Map) recursivelyGet(assetsMap, "imageUrl.img"));
         Image iconUrl = toImage((Map) recursivelyGet(assetsMap, "iconUrl.img"));
         Link clickUrl = new Link((String) recursivelyGet(assetsMap, "clickUrl.link.url"));
-        return new Ad(title, description, imageUrl, iconUrl, clickUrl);
+        List<String> impressionLink = (List) recursivelyGet(responseBody, "native.impressionLink");
+        return new Ad(title, description, imageUrl, iconUrl, clickUrl, impressionLink);
     }
 
     /**
