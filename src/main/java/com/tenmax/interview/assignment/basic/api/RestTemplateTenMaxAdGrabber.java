@@ -31,7 +31,7 @@ public class RestTemplateTenMaxAdGrabber implements TenMaxAdGrabber {
      * 對廣告擷取API發出請求，並回傳內容主體
      * @param retry 請求重試次數
      */
-    private Map requestTenMaxAd(int retry) {
+    public Map requestTenMaxAd(int retry) {
         while (retry > 0) {
             Map responseBody = restTemplate.getForObject(endpoint, Map.class);
             if (responseBody == null || responseBody.isEmpty()) {
