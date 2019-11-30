@@ -24,7 +24,6 @@ public class GoofAroundMockTenMaxAd implements MockTenMaxAd {
     @Override
     public Map response() {
         try {
-            System.out.println(Thread.currentThread().getId());
             Thread.sleep(goofAroundSeconds * 1000);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
