@@ -1,0 +1,1 @@
+INSERT INTO ad (id, title, description, image_url, image_width, image_height, icon_url, icon_width, icon_height, click_url, impression_link) VALUES (0, 'TITLE', 'DESCRIPTION', 'IMG_URL', 1, 1, 'ICON_URL', 1, 1, 'CLICK_URL', 'IMPRESSION_LINK')
