@@ -1,0 +1,30 @@
+version: '3.7'
+
+services:
+  web:
+    build: .
+    ports:
+      - "8080:8080"
+    restart: always
+    depends_on: 
+      - db
+    environment:
+      SPRING_PROFILES_ACTIVE: docker 
+    networks:
+      - tenmaxnet
+
+  db:
+    image: mysql:5
+    ports:
+      - "3306:3306"
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: assignment
+      MYSQL_DATABASE: tenmax
+      MYSQL_USER: ten
+      MYSQL_PASSWORD: max
+    networks:
+      - tenmaxnet
+
+networks:
+  tenmaxnet:

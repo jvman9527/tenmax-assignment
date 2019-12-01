@@ -1,0 +1,12 @@
+spring:
+  jpa.hibernate.ddl-auto: update
+  datasource:
+    initialization-mode: always
+    username: ten
+    password: max
+    platform: h2
+    url: jdbc:h2:mem:test;MODE=MySQL;DB_CLOSE_DELAY=-1
+    sql-script-encoding: UTF-8
+
+tenmax.api.endpoint: https://tenmax-mock-dsp.azurewebsites.net/api/getAds?code=s9Ybtsb6hwigndO6a5OwsLmXOPR0olrW7nBFFE7QmHfvaQ6p9GWXwg==
+mock.api.endpoint: http://localhost:8080/api/getAds?code=s9Ybtsb6hwigndO6a5OwsLmXOPR0olrW7nBFFE7QmHfvaQ6p9GWXwg==
