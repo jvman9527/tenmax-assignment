@@ -8,7 +8,8 @@ import com.tenmax.interview.assignment.basic.repository.AdRepository;
 import java.util.*;
 
 /**
- * TenMax Mock Api
+ * TenMax 模擬廣告資料庫支援版
+ * 利用定時抓取下來的廣告資料表隨機產生API結果
  */
 public class RepositoryMockTenMaxAd implements MockTenMaxAd {
 
@@ -20,7 +21,8 @@ public class RepositoryMockTenMaxAd implements MockTenMaxAd {
 
     @Override
     public Map response() {
-        return null;
+        Ad ad = adRepository.randomOne();
+        return toMockApiResult(ad);
     }
 
     public static Map toMockApiResult(Ad ad) {
